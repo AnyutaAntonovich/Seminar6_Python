@@ -1,11 +1,18 @@
 # Определить индексы элементов массива (списка), значения которых принадлежат заданному диапазону 
 # (т.е. не меньше заданного минимума и не больше заданного максимума)
 
-list_1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
-list_2 = []
-max = 15
-min = 5
+import random
 
-for i in range(len(list_1)):
-    if min <= list_1[i] <= max:
-        print(i, end=' ')
+list1 = [random.randint(-50, 50) for i in range(random.randint(10, 50))]
+list2 = []
+print(*list1)
+
+max_i = int(input('Input the value MAX = '))
+min_i = int(input('Input the value MIN = '))
+
+if max_i >= min_i:
+   for i in range(len(list1)):
+      if max_i >= list1[i] and min_i <= list1[i]:
+          list2.append(i)
+   print('Indexes: ', list2)
+   print('Quantity: ', len(list2))

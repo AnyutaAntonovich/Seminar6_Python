@@ -3,8 +3,8 @@
 # an = a1 + (n-1) * d.
 # Каждое число вводится с новой строки.
 
-a1 = int(input('Input a1: '))
+
+a = int(input('Input a1: '))
 d = int(input('Input d: '))
 n = int(input('Input n: '))
-for i in range(n):
-    print(a1 + i * d, end=' ')
+print(*range(a, a + d * n, d))
